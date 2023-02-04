@@ -34,3 +34,5 @@ Once you've set the file permissions to executable you can run the script from t
 # lcdsetup.sh
 
 This step is optional **ONLY** if you don't plan on installing any LCD based games like the Game & Watch titles. If these titles are something you're interested in, then you will need to run `./lcdsetup.sh` after you've run the `setup.sh` file above.
+
+I've written a [guide to LCD-Game-Shrinker](https://gist.github.com/DNA64/16fed499d6bd4664b78b4c0a9638e4ef) that you can view for more information. I will likely merge it here sometime in the near future. You'll want to start on **Step 7** if you've already used the `lcdsetup.sh` script here.

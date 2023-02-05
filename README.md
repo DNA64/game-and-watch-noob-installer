@@ -31,6 +31,8 @@ It also downloads a public domain NES rom which is necessary to avoid error mess
 
 Once you've set the file permissions to executable you can run the script from the terminal using `./setup.sh`.
 
+Upon completion you will need to unlock your Game & Watch if you haven't done so already. I will automate this step shortly as well, for now please follow the [steps outlined here](https://github.com/ghidraninja/game-and-watch-backup#usage).
+
 # lcdsetup.sh
 
 This step is optional **ONLY** if you don't plan on installing any LCD based games like the Game & Watch titles. If these titles are something you're interested in, then you will need to run `./lcdsetup.sh` after you've run the `setup.sh` file above.

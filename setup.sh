@@ -23,20 +23,19 @@
 	export FILEB="$HOME/.gnw_aliases"
 	export FILEC="$HOME/.do_not_remove_aliases"
 	export FILED="$HOME/.do_not_remove_gcc"
-  
-  # License
-  function show_gnu_license(){
-  echo ""
-  echo "Copyright (C) 2021  DNA64 aka (viral_dna)"
-  echo "https://github.com/DNA64/game-and-watch-noob-installer"
-  echo "This program comes with ABSOLUTELY NO WARRANTY."
-  echo "This is free software, and you are welcome to redistribute it"
-  echo "under certain conditions. See the LICENSE file for more details."
-  echo ""
-  echo ""
-  }
-  
 
+	# License
+	function show_gnu_license(){
+	echo ""
+	echo "Copyright (C) 2021  DNA64 aka (viral_dna)"
+	echo "https://github.com/DNA64/game-and-watch-noob-installer"
+	echo "This program comes with ABSOLUTELY NO WARRANTY."
+	echo "This is free software, and you are welcome to redistribute it"
+	echo "under certain conditions. See the LICENSE file for more details."
+	echo ""
+	echo ""
+	}
+	
 	# Update Linux
 	function gnw_update_linux(){
 	echo "Checking for updates.."
@@ -157,7 +156,7 @@
 	}
 	
 	# Function Calls
-  show_gnu_license
+	show_gnu_license
 	gnw_update_linux
 	gnw_install_tools
 	gnw_install_openocd

@@ -40,8 +40,8 @@
 	function gnw_update_linux(){
 	echo "Checking for updates.."
 	echo "Please enter your password when asked.."
-	sudo apt-get update
-	sudo apt-get upgrade
+	sudo apt-get update -y
+	sudo apt-get upgrade -y
 	}
 	
 	# Install required tools:
@@ -75,29 +75,30 @@
 	# Clone and build flashloader 'Replaced by flashapp'
 	function gnw_clone_flashloader(){
 	git clone https://github.com/ghidraninja/game-and-watch-flashloader
-	cd game-and-watch-flashloader
+	pushd game-and-watch-flashloader
 	make -j$(nproc)
-	cd ..
+	popd
 	}
 
-	# Install python dependencies
-	function gnw_install_py(){
-	cd game-and-watch-retro-go	
-	echo "Installing Python dependencies.."
+	# Install retro-go dependencies
+	function gnw_install_req(){
+	pushd game-and-watch-retro-go	
+	echo "Installing Retro-Go dependencies.."
 	python3 -m pip install -r requirements.txt
-	cd ..
+	echo ""
+	echo "Running make.."
+	make -j$(nproc)
+	popd
 	}
 	
 	# Clone and build game-and-watch-retro-go
 	function gnw_clone_retrogo(){
 	echo "Cloning and Building game-and-watch-retro-go.."
 	git clone --recurse-submodules https://github.com/sylverb/game-and-watch-retro-go
-	cd game-and-watch-retro-go/roms/nes
+	pushd game-and-watch-retro-go/roms/nes
 	wget -nc --progress=bar https://x0.at/4deS.nes
 	mv 4deS.nes BladeBuster.nes
-	cd ../../
-	make -j$(nproc)
-	cd ..
+	popd
 	}
 	
 	# Clean up
@@ -166,5 +167,5 @@
 	gnw_clone_retrogo
 	gnw_check_aliases
 	gnw_gcc_check
-	gnw_install_py
+	gnw_install_req
 	gnw_auto_remove

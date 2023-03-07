@@ -3,6 +3,14 @@ A collection of scripts designed to help beginners setup their build environment
 
 This was previously hosted on my gist account, but I felt it would be better hosted here on Github for a number of reasons.
 
+# Compatability
+AMD64 (also known as x86_64, Intel 64). 64-bit Debian based Linux distributions.
+
+- Ubuntu
+- Linux Mint
+- Kali Linux
+- etc..
+
 # TLDR;
 
 Make both `.setup.sh` and `lcdsetup.sh` scripts executable and run in that order. lcdsetup is optional if you don't want G&W/LCD titles.

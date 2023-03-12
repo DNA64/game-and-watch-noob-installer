@@ -11,6 +11,10 @@ AMD64 (also known as x86_64, Intel 64). 64-bit Debian based Linux distributions.
 - Kali Linux
 - etc..
 
+# Issues
+
+- I haven't added in any support for CFW (Custom Firmware), so you'll still need to [follow the instructions here](https://github.com/sylverb/game-and-watch-retro-go#custom-firmware-cfw) carefully.
+
 # TLDR;
 
 Make both `.setup.sh` and `lcdsetup.sh` scripts executable and run in that order. lcdsetup is optional if you don't want G&W/LCD titles.

@@ -17,7 +17,7 @@
 	# along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 	export GCC_PATH="/opt/gcc-arm-none-eabi/bin/"
-	export OPENOCD="/opt/openocd-git/bin/"
+	export OPENOCD="/opt/openocd-git/bin/openocd"
 	export PATH="$PATH:$GCC_PATH"
 	export FILEA="$HOME/.bashrc"
 	export FILEB="$HOME/.gnw_aliases"
@@ -125,7 +125,7 @@
 
 	function gnw_gcc_update(){
 	echo "# Persistent GCC Path"
-	echo "export OPENOCD=/opt/openocd-git/bin/"
+	echo "export OPENOCD=/opt/openocd-git/bin/openocd"
 	echo "GCC_PATH=/opt/gcc-arm-none-eabi/bin/"
 	echo "PATH=\$PATH:\$GCC_PATH:\$OPENOCD"
 	}

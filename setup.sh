@@ -105,12 +105,15 @@
 	echo "Removing any unneeded dependencies.."
 	sudo apt autoremove
 	echo "Removing installation files.."
+	echo ""
 	echo "Press Y/y to remove or N/n to keep installation packages when asked.."
 	echo "You can keep them or delete them, it doesn't matter."
 	sudo rm -i *.deb *.zip *.bz2
 	echo ""
-	echo "All done! Congratulations you should now be able to build and flash retro-go to"
-	echo "your Game & Watch. Please report any issues so I can fix them."
+	echo "All done!"
+	echo "You must close this terminal window for changes to take effect"
+	echo "before attempting to unlock, backup and flash your Game & Watch."
+	echo "Please report any issues you find and I will do my best to fix them."
 	echo " - DNA64 aka (viral_dna)"
 	}
 	

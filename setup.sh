@@ -46,7 +46,7 @@
 	
 	# Install required tools:
 	function gnw_install_tools(){
-	sudo apt-get install wget binutils-arm-none-eabi python3 python3-pip git libhidapi-hidraw0 libftdi1 libftdi1-2 lz4
+	sudo apt-get -y install wget binutils-arm-none-eabi python3 python3-pip git libhidapi-hidraw0 libftdi1 libftdi1-2 lz4
 	}
 
 	# Install openocd:

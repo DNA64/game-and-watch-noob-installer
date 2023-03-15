@@ -69,7 +69,7 @@
 	# Clone and build game-and-watch-backup
 	function gnw_clone_backup(){
 	echo "Cloning and Building game-and-watch-backup.."
-	git clone https://github.com/ghidraninja/game-and-watch-backup
+	git clone --recurse-submodules https://github.com/ghidraninja/game-and-watch-backup
 	}
 	
 	# Clone and build flashloader 'Replaced by flashapp'

@@ -126,7 +126,7 @@
 	function gnw_gcc_update(){
 	echo "# Persistent GCC Path"
 	echo "export OPENOCD=/opt/openocd-git/bin/openocd"
-	echo "GCC_PATH=/opt/gcc-arm-none-eabi/bin/"
+	echo "export GCC_PATH=/opt/gcc-arm-none-eabi/bin/"
 	echo "PATH=\$PATH:\$GCC_PATH:\$OPENOCD"
 	}
 	

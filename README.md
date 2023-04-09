@@ -4,7 +4,7 @@ A collection of scripts designed to help beginners setup their build environment
 This was previously hosted on my gist account, but I felt it would be better hosted here on Github for a number of reasons.
 
 # Compatability
-AMD64 (also known as x86_64, Intel 64). 64-bit Debian based Linux distributions.
+AMD64 (also known as x86_64, Intel 64). 64-bit Debian based Linux distributions. (The Raspberry Pi is **NOT SUPPORTED**)
 
 - Ubuntu
 - Linux Mint

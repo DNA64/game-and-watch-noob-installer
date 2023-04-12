@@ -1,4 +1,8 @@
 # game-and-watch-noob-installer
+
+**See it in action here!**
+[![Game & Watch Retro-Go Script Automates the difficult setup for you!](https://i.imgur.com/lX94I1H.png)](https://www.youtube.com/watch?v=5zW2zcGp8dw "Game & Watch Retro-Go Script Automates the difficult setup for you!")
+
 A collection of scripts designed to help beginners setup their build environment and flash their Game &amp; Watch systems with greater ease.
 
 This was previously hosted on my gist account, but I felt it would be better hosted here on Github for a number of reasons.

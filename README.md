@@ -41,13 +41,13 @@ From the UI:
 
 setup.sh does **NOT SUPPORT** the Raspberry Pi.
 
+Once you've set the file permissions to executable you can run the script from the terminal using `./setup.sh`.
+
 The `setup.sh` script will clone and build both stacksmashing's [game-and-watch-backup](https://github.com/ghidraninja/game-and-watch-backup) and sylverb's fork of the [game-and-watch-retro-go](https://github.com/sylverb/game-and-watch-retro-go) Github repositories. It will also install all required submodules, drivers and dependencies. As well as install a the GCC toolchain and a custom build of OpenOCD that allows you to utilize hidden space on the Game & Watch.
 
 The script will also add both OpenOCD and the GCC toolchain to your systems PATH. This is where a lot of users run into issues turning to the [Discord for support](https://discord.gg/rE2nHVAKvn).
 
 It also downloads a public domain NES rom which is necessary to avoid error messages on initial building of `game-and-watch-retro-go` which leave some users confused and seeking answers as to why they're getting errors. This rom can be deleted once you've added your own, however, please try flashing your system first before adding anymore games or making any additional changes.
-
-Once you've set the file permissions to executable you can run the script from the terminal using `./setup.sh`.
 
 Upon completion you will need to unlock your Game & Watch if you haven't done so already. I will automate this step shortly as well, for now please follow the [steps outlined here](https://github.com/ghidraninja/game-and-watch-backup#usage).
 

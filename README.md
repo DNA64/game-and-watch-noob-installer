@@ -39,7 +39,7 @@ From the UI:
 
 # setup.sh
 
-setup.sh **NOT SUPPORT** the Raspberry Pi.
+setup.sh does **NOT SUPPORT** the Raspberry Pi.
 
 The `setup.sh` script will clone and build both stacksmashing's [game-and-watch-backup](https://github.com/ghidraninja/game-and-watch-backup) and sylverb's fork of the [game-and-watch-retro-go](https://github.com/sylverb/game-and-watch-retro-go) Github repositories. It will also install all required submodules, drivers and dependencies. As well as install a the GCC toolchain and a custom build of OpenOCD that allows you to utilize hidden space on the Game & Watch.
 

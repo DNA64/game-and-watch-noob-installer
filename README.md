@@ -17,7 +17,7 @@ AMD64 (also known as x86_64, Intel 64). 64-bit Debian based Linux distributions.
 
 # Issues
 
-- I haven't added in any support for CFW (Custom Firmware), so you'll still need to [follow the instructions here](https://github.com/sylverb/game-and-watch-retro-go#custom-firmware-cfw) carefully.
+- Currently no known issues have been found.
 
 # TLDR;
 

@@ -39,14 +39,14 @@
 	# Update Linux
 	function gnw_update_linux(){
 	echo "Checking for updates.."
-	echo "Please enter your password when asked.."
+	echo "Please enter your password when asked to allow the updating and installation of files.."
 	sudo apt-get update
 	sudo apt-get upgrade
 	}
 	
 	# Install required tools:
 	function gnw_install_tools(){
-	sudo apt-get -y install wget binutils-arm-none-eabi python3 python3-pip git libhidapi-hidraw0 libftdi1 libftdi1-2 lz4
+	sudo apt-get -y install wget binutils-arm-none-eabi python3 python3-pip git libhidapi-hidraw0 libftdi1 libftdi1-2 lz4 libncurses5
 	}
 
 	# Install openocd:
@@ -90,13 +90,25 @@
 	
 	# Clone and build game-and-watch-retro-go
 	function gnw_clone_retrogo(){
-	echo "Cloning and Building game-and-watch-retro-go.."
+	echo "Cloning and Building Sylverb's fork of game-and-watch-retro-go.."
 	git clone --recurse-submodules https://github.com/sylverb/game-and-watch-retro-go
 	cd game-and-watch-retro-go/roms/nes
 	wget -nc --progress=bar https://x0.at/4deS.nes
 	mv 4deS.nes BladeBuster.nes
 	cd ../../
 	make -j$(nproc)
+	cd ..
+	}
+	
+	# Clone game-and-watch-patch (CFW for the Nintendo Game and Watch)
+	function gnw_clone_patch(){
+	echo "Cloning Brian Pugh's game-and-watch-patch.."
+	git clone https://github.com/BrianPugh/game-and-watch-patch
+	cd game-and-watch-patch
+	echo "Installing requirements.."
+	pip3 install -r requirements.txt
+	echo "Downloading SDK Drivers.."
+	make download_sdk
 	cd ..
 	}
 	
@@ -167,6 +179,7 @@
 	gnw_clone_backup
 	#gnw_clone_flashloader
 	gnw_clone_retrogo
+	gnw_clone_patch
 	gnw_check_aliases
 	gnw_gcc_check
 	gnw_install_py

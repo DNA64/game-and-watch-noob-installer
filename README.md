@@ -11,7 +11,7 @@ This was previously hosted on my gist account, but I felt it would be better hos
 AMD64 (also known as x86_64, Intel 64). 64-bit Debian based Linux distributions.
 
 - Ubuntu
-- [Linux Mint - Recomended & Tested!](https://linuxmint.com/edition.php?id=303)
+- [Linux Mint - Recommended & Tested!](https://linuxmint.com/edition.php?id=303)
 - Kali Linux
 - etc..
 

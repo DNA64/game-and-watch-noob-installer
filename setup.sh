@@ -40,8 +40,8 @@
 	function gnw_update_linux(){
 	echo "Checking for updates.."
 	echo "Please enter your password when asked to allow the updating and installation of files.."
-	sudo apt-get update
-	sudo apt-get upgrade
+	sudo apt-get -y update
+	sudo apt-get -y upgrade
 	}
 	
 	# Install required tools:

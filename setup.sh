@@ -52,8 +52,7 @@
 	# Install openocd:
 	function gnw_install_openocd(){
 	echo "Installing Custom OpenOCD to allow write access to hidden memory banks.."
-	wget -nc --progress=bar https://nightly.link/kbeckmann/ubuntu-openocd-git-builder/workflows/docker/master/openocd-git.deb.zip
-	unzip openocd-git.deb.zip
+	wget -nc --progress=bar https://github.com/kbeckmann/ubuntu-openocd-git-builder/releases/download/rel/openocd-git_0.12.0-755-gedf2c82cf_amd64.deb
 	sudo dpkg -i openocd-git_*_amd64.deb
 	sudo apt-get -y -f install
 	}
@@ -120,7 +119,7 @@
 	echo ""
 	echo "Press Y/y to remove or N/n to keep installation packages when asked.."
 	echo "You can keep them or delete them, it doesn't matter."
-	sudo rm -i *.deb *.zip *.bz2
+	sudo rm -i *.deb *.bz2
 	echo ""
 	echo "All done!"
 	echo "You must close this terminal window for changes to take effect"

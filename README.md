@@ -50,9 +50,10 @@ The script will also add both OpenOCD and the GCC toolchain to your systems PATH
 It also downloads a public domain NES rom which is necessary to avoid error messages on initial building of `game-and-watch-retro-go` which leave some users confused and seeking answers as to why they're getting errors. This rom can be deleted once you've added your own, however, please try flashing your system first before adding anymore games or making any additional changes.
 
 Upon completion you will need to unlock your Game & Watch if you haven't done so already. I will automate this step shortly as well, for now please follow the [steps outlined here](https://github.com/ghidraninja/game-and-watch-backup#usage).
+It's best to start with a fresh install when using this script for best results.
 
 # lcdsetup.sh
 
-This step is optional **ONLY** if you don't plan on installing any LCD based games like the Game & Watch titles. If these titles are something you're interested in, then you will need to run `./lcdsetup.sh` after you've run the `setup.sh` file above.
+This step is optional **ONLY** if you don't plan on installing any LCD based games like the Game & Watch titles. If these titles are something you're interested in, then you will need to run `./lcdsetup.sh` after you've run the `setup.sh` file above (You can skip this step if your system is already working and configured for flashing the Game & Watch).
 
 I've written a [guide to LCD-Game-Shrinker](https://gist.github.com/DNA64/16fed499d6bd4664b78b4c0a9638e4ef) that you can view for more information. I will likely merge it here sometime in the near future. You'll want to start on **Step 7** if you've already used the `lcdsetup.sh` script here.

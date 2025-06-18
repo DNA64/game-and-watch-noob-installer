@@ -31,7 +31,7 @@
     # Install Inkscape
     function gnw_install_inkscape(){
     echo "Installing Inkscape package (Required by LCD-Game-Shrinker)"
-    sudo add-apt-repository ppa:inkscape.dev/stable
+    sudo add-apt-repository ppa:inkscape.dev/stable-1.1
     sudo apt-get update
     sudo apt install inkscape
     }

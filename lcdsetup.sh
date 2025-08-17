@@ -29,12 +29,45 @@
     }
 
     # Install Inkscape
-    function gnw_install_inkscape(){
-    echo "Installing Inkscape package (Required by LCD-Game-Shrinker)"
-    sudo add-apt-repository ppa:inkscape.dev/stable
-    sudo apt-get update
-    sudo apt install inkscape
-    }
+function gnw_install_inkscape(){
+    echo "Checking Ubuntu release..."
+
+    # Get Ubuntu codename (e.g., 'focal', 'jammy', 'mantic')
+    UBUNTU_CODENAME=$(lsb_release -c | awk '{print $2}')
+
+    # List of stable Ubuntu codenames
+    STABLE_RELEASES=("focal" "jammy" "noble")
+
+    if [[ " ${STABLE_RELEASES[@]} " =~ " ${UBUNTU_CODENAME} " ]]; then
+        echo "Detected stable release: ${UBUNTU_CODENAME}"
+        echo "Installing Inkscape from PPA..."
+        sudo add-apt-repository -y ppa:inkscape.dev/stable-1.1
+        sudo apt-get update
+        sudo apt install -y inkscape
+    else
+        echo "Detected interim release: ${UBUNTU_CODENAME}"
+        echo "Installing Inkscape from source..."
+
+        # Install build dependencies
+        sudo apt update
+        sudo apt install -y build-essential cmake pkg-config \
+            libgtk-3-dev libglib2.0-dev libpango1.0-dev \
+            libcairo2-dev libboost-dev libpoppler-dev \
+            libpoppler-glib-dev libgsl-dev libgc-dev \
+            libgtkmm-3.0-dev libxml2-dev libxslt1-dev \
+            libjpeg-dev libpng-dev libtiff-dev
+
+        # Download and build Inkscape
+        wget https://media.inkscape.org/dl/resources/file/inkscape-1.1.tar.xz
+        tar -xf inkscape-1.1.tar.xz
+        cd inkscape-1.1
+        mkdir build && cd build
+        cmake ..
+        make -j$(nproc)
+        sudo make install
+        cd ../..
+    fi
+}
 
     # Clone and Build LCD-Game-Shrinker
     function gnw_clone_lcdgs(){

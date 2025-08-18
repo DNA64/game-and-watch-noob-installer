@@ -96,7 +96,8 @@ function gnw_install_inkscape(){
         libcairo2-dev libboost-dev libpoppler-dev \
         libpoppler-glib-dev libgsl-dev libgc-dev \
         libgtkmm-3.0-dev libxml2-dev libxslt1-dev \
-        libjpeg-dev libpng-dev libtiff-dev
+        libjpeg-dev libpng-dev libtiff-dev \
+        libsoup2.4-dev liblcms2-dev
 
     # Download and build Inkscape
     wget https://media.inkscape.org/dl/resources/file/inkscape-1.1.tar.xz
@@ -152,4 +153,4 @@ function lcd_game_shrinker(){
 log INFO "Starting Game & Watch Build Environment setup..."
 show_gnu_license
 lcd_game_shrinker
-log INFO "Setup completed successfully."
+log INFO "Setup completed. See ../lcdsetup.log if you had issues."

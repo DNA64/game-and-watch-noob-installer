@@ -16,14 +16,14 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-# Logging
-LOG_FILE="$HOME/lcdsetup.log"
+    # Logging
+    LOG_FILE="$HOME/lcdsetup.log"
 
-# ANSI color codes
-RED='\033[0;31m'
-YELLOW='\033[1;33m'
-GREEN='\033[0;32m'
-NC='\033[0m' # No Color
+    # ANSI color codes
+    RED='\033[0;31m'
+    YELLOW='\033[1;33m'
+    GREEN='\033[0;32m'
+    NC='\033[0m' # No Color
 
 function log(){
     local level="$1"
@@ -101,7 +101,10 @@ function gnw_install_inkscape(){
     # Download and build Inkscape
     wget https://media.inkscape.org/dl/resources/file/inkscape-1.1.tar.xz
     tar -xf inkscape-1.1.tar.xz
-    cd inkscape-1.1
+
+    # Find the extracted directory
+    INKSCAPE_SRC_DIR=$(tar -tf inkscape-1.1.tar.xz | head -1 | cut -f1 -d"/")
+    cd "$INKSCAPE_SRC_DIR"
     mkdir build && cd build
     cmake ..
     make -j$(nproc)
